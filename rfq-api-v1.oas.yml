@@ -14,7 +14,7 @@ paths:
     post:
       tags:
         - RFQ
-      operationid: creatQuote
+      operationId: creatQuote
       description: Create a Quote
       requestBody:
         content:
