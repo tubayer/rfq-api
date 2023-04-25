@@ -1,8 +1,13 @@
+name: OpenAPI Checks
+
 on:
   - push
 
 jobs:
-  build:
+  Checks:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Building..."
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm install -g @stoplight/spectral-cli
+      - run: spectral lint rfq-api-v1.oas.yml
