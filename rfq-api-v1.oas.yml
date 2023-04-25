@@ -2,11 +2,20 @@ openapi: '3.0.2'
 info:
   title: Quotation API
   version: '1.0'
+  contact:
+    email: bayer@predic8.de
+  description: Quotation API for Quotes
 servers:
   - url: https://api.server.test/v1
+tags:
+  - name: RFQ
 paths:
   /rfqs:
     post:
+      tags:
+        - RFQ
+      operationid: creatQuote
+      description: Create a Quote
       requestBody:
         content:
           application/json:
